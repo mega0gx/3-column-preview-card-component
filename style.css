@@ -58,9 +58,11 @@ main {
     padding: 2rem;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    justify-content: space-around;
 }
-
+.card > *{
+    margin: 20px;
+}
 .card__title {
     font-family: var(--titleFont);
     color: var(--mainBG);
