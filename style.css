@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Lexend+Deca:wght@100..900&display=swap');
+
+:root {
+    /* primary */
+    --mainBG: hsl(0, 0%, 95%);
+    --cardBG1: hsl(31, 77%, 52%);
+    --cardBG2: hsl(184, 100%, 22%);
+    --cardBG3: hsl(179, 100%, 13%);
+    /* neutral */
+    --mainParagraph: hsla(0, 0%, 100%, 0.75);
+    /* font */
+    --mainFont: "Lexend Deca", sans-serif;
+    --titleFont: "Big Shoulders Display", sans-serif;
+    /* font size */
+    --headWeight: 700;
+    --textWeight: 400;
+    --fontSize: 15px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: var(--fontSize);
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--mainBG);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;  /* Allows items to wrap naturally */
+    justify-content: center;
+    border-radius: 20px;
+    max-width: 900px;
+    width: 100%;
+}
+
+.card {
+    flex: 1;  /* Makes all cards take equal space */
+    min-width: 280px;  /* Ensures they don't shrink too much */
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.card__title {
+    font-family: var(--titleFont);
+    color: var(--mainBG);
+    font-size: 3rem;
+}
+
+.card__content {
+    font-family: var(--mainFont);
+    color: var(--mainParagraph);
+    line-height: 2rem;
+}
+
+.card__btn {
+    margin-top: 2rem;
+}
+
+.card__btn button {
+    background-color: var(--mainBG);
+    border: none;
+    padding: 1.5rem 2rem;
+    font-weight: var(--headWeight);
+    border-radius: 30px;
+    font-family: var(--mainFont);
+    cursor: pointer;
+}
+
+.card__img {
+    width: 70px;
+    height: auto;
+}
+
+.card-1 {
+    background-color: var(--cardBG1);
+    border-radius: 10px 0 0 10px;
+}
+
+.card-2 {
+    background-color: var(--cardBG2);
+}
+
+.card-3 {
+    background-color: var(--cardBG3);
+    border-radius: 0 10px 10px 0;
+}
+
+.card-1 button {
+    color: var(--cardBG1);
+}
+
+.card-2 button {
+    color: var(--cardBG2);
+}
+
+.card-3 button {
+    color: var(--cardBG3);
+}
+
+/* Mobile Layout */
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .card-1 {
+        border-radius: 10px 10px 0 0;
+    }
+
+    .card-3 {
+        border-radius: 0 0 10px 10px;
+    }
+}
